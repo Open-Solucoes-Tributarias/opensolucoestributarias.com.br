@@ -45,6 +45,7 @@ html {
   justify-content: space-between;
   padding-inline: 15%; /*padding padrão */
   padding-block: 0.6%;
+  background: #f3f3f3;
 }
 @media (max-width: 768px) {
   .header-menu {
@@ -72,6 +73,9 @@ html {
   text-decoration: none;
   color: #333;
   font-size: 16px;
+}
+.menu-navbar a:hover {
+  color: #001568;
 }
 .icons {
   width: 16px;
@@ -121,7 +125,7 @@ html {
 }
 
 .subtitle-banner {
-  font-size: 25px;
+  font-size: 24px;
   color: #ffffff;
 }
 
@@ -488,11 +492,11 @@ footer {
 }
 
 .footer-logo {
-  width: 150px;
+  width: 70px;
 }
 @media (max-width: 768px) {
   .footer-logo {
-    width: 100%;
+    width: 90%;
   }
 }
 .footer-left {
