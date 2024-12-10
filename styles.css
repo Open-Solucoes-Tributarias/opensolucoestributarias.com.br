@@ -227,7 +227,7 @@ html {
 .services-content {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 40px;
   padding-inline: 15%;
   padding-block: 3%;
 }
@@ -241,10 +241,16 @@ html {
   padding: 50px;
   border-radius: 10px;
 }
+.services-card:hover {
+  transform: scale(1.02);
+  background-color: #a0a0a05e;
+  cursor: pointer;
+}
 .service-image {
   justify-self: start;
-  width: 100%;
+  width: 50%;
   max-width: 300px;
+  margin: 0 auto;
 }
 .service-description {
   display: flex;
@@ -259,7 +265,7 @@ html {
   color: #001568;
 }
 .service-description p {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
 }
 /* service description left */
@@ -274,10 +280,16 @@ html {
   padding: 50px;
   border-radius: 10px;
 }
+.services-card2:hover {
+  transform: scale(1.02);
+  background-color: #a0a0a05e;
+  cursor: pointer;
+}
 .service-image2 {
   justify-self: end;
-  width: 100%;
+  width: 50%;
   max-width: 300px;
+  margin: 0 auto;
 }
 .service-description2 {
   display: flex;
@@ -292,7 +304,7 @@ html {
   color: #001568;
 }
 .service-description2 p {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
 }
 
