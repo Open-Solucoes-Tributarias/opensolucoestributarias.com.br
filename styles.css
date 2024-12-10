@@ -141,9 +141,23 @@ html {
 }
 
 /*seção de apresentação */
-.presentation {
+.section-resume {
   padding-inline: 15%;
+  padding-top: 2%;
   background: linear-gradient(90deg, #001568 0%, #2987f2 100%);
+  text-align: center;
+}
+.section-resume h2 {
+  color: #f5f5f5;
+  font-size: 30px;
+  font-weight: 600;
+}
+.section-resume b {
+  color: #c79d63;
+  font-weight: 700;
+}
+
+.presentation {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
@@ -198,7 +212,7 @@ html {
   overflow: hidden;
 }
 
-.presentation-right video {
+.presentation-right iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -242,6 +256,7 @@ html {
 .service-description h3 {
   font-size: 26px;
   font-weight: 600;
+  color: #001568;
 }
 .service-description p {
   font-size: 18px;
@@ -274,6 +289,7 @@ html {
 .service-description2 h3 {
   font-size: 26px;
   font-weight: 600;
+  color: #001568;
 }
 .service-description2 p {
   font-size: 18px;
@@ -299,9 +315,10 @@ html {
   }
 }
 .section-divider b {
-  color: #c79d63;
+  color: #001568;
   font-weight: 700;
 }
+
 /*section-team*/
 
 .title-team {
