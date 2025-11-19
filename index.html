@@ -18,6 +18,9 @@
     <meta property="og:image" content="https://openconsultoriatributaria.com.br/imagem-de-destaque.jpg">
     <meta property="og:url" content="https://openconsultoriatributaria.com.br/">
     <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" />
+
 </head>
 
 <body>
@@ -35,14 +38,11 @@
             <img src="assets/icons/phone.svg" alt="instagram" class="icons" />0800 888 1482
         </nav>
     </header>
+    </div>
+    <!-- banner com slider -->
     <section class="banner">
-        <div class="banner-text">
-            <h1 class="title-banner">Tudo o que você precisa em solução tributária, a Open tem. </h1>
-            <h1 class="subtitle-banner">Soluções inteligentes em consultoria, treinamento, sistemas e editora para aprimorar a gestão tributária no setor público e privado.</h1>
-
-            <a href="https://api.whatsapp.com/send?phone=5571992084907" target="_blank">
-                <button class="button">SABER MAIS</button>
-            </a>
+        <div class="my-slider" id="my-slider">
+            <!-- slides serão inseridos via JS -->
         </div>
     </section>
     <section class="section-divider">
@@ -56,7 +56,8 @@
                 </div>
                 <div class="service-description">
                     <h3>Sistema Web Gestão Tributária</h3>
-                    <p>Simulador de retenções online, sistema de envio rápido da EFD-Reinf, artigos e legislação focados nas
+                    <p>Simulador de retenções online, sistema de envio rápido da EFD-Reinf, artigos e legislação focados
+                        nas
                         incidências de INSS, Imposto de Renda, Contribuições Sociais e ISS na fonte.</p>
                 </div>
             </article>
@@ -81,7 +82,8 @@
                 </div>
                 <div class="service-description">
                     <h3>Consultoria</h3>
-                    <p>Braço de atuação da Open Soluções Tributárias que tem com foco principal a redução e a recuperação de
+                    <p>Braço de atuação da Open Soluções Tributárias que tem com foco principal a redução e a
+                        recuperação de
                         créditos tributários, bem como o planejamento da incidência de tributos devidos pelas empresas e
                         entidades públicas em geral.</p>
                 </div>
@@ -92,9 +94,11 @@
                 <div class="service-description2">
                     <h3>Editora</h3>
                     <p>Publicação da obra Gestão Tributária de Contratos e
-                        Convênios, que já está em sua 10ª edição e é a obra mais completa do mercado acerca das principais
+                        Convênios, que já está em sua 10ª edição e é a obra mais completa do mercado acerca das
+                        principais
                         retenções e encargos tributários incidentes sobre a contratação de pessoas físicas e jurídicas,
-                        abordando o INSS, o Imposto de Renda, as Contribuições Sociais (CSLL, PIS/Pasep, Cofins) e também o
+                        abordando o INSS, o Imposto de Renda, as Contribuições Sociais (CSLL, PIS/Pasep, Cofins) e
+                        também o
                         ISS. </p>
                 </div>
                 <div class="service-image2">
@@ -166,7 +170,8 @@
                     livro do mercado focado na Tributação da Atividade de Saúde, contemplando orientações e explicações
                     acerca do recolhimento de tributos por parte de empresas e profissionais do segmento.
                     <br />
-                    Acesse <a href="https://opentreinamentos.com.br/livros/" target="_blank" ><b>AQUI</b></a> a nossa livraria virtual!
+                    Acesse <a href="https://opentreinamentos.com.br/livros/" target="_blank"><b>AQUI</b></a> a nossa
+                    livraria virtual!
                 </p>
             </div>
         </div>
@@ -234,6 +239,47 @@
             <p> &copy; 2024 Open Soluções Tributárias. Todos os direitos reservados</p>
         </div>
     </footer>
+
+    <!-- tiny-slider script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+
+<script>
+  // dados dos banners (substitua pelas suas URLs)
+  const banners = [
+    { url: './assets/slides/banner-1.jpg', alt: 'Promo 1', caption: 'Promo 1' },
+    { url: './assets/slides//banner-2.jpg', alt: 'Promo 2', caption: 'Promo 2' },
+    { url: './assets/slides/banner-3.jpg', alt: 'Promo 2', caption: 'Promo 2' },
+    { url: './assets/slides/banner-4.jpg', alt: 'Promo 2', caption: 'Promo 2' },
+    { url: './assets/slides/banner-5.jpg', alt: 'Promo 2', caption: 'Promo 2' }
+  ];
+
+  // espera o DOM carregar
+  document.addEventListener('DOMContentLoaded', function () {
+    const container = document.getElementById('my-slider');
+
+    // monta slides
+    banners.forEach(b => {
+      const slide = document.createElement('div');
+      slide.className = 'slide';
+      slide.innerHTML = `
+        <img src="${b.url}" alt="${(b.alt || 'banner')}" loading="lazy" />     
+      `;
+      container.appendChild(slide);
+    });
+
+    // inicializa o slider (agora que os slides existem)
+    var slider = tns({
+      container: '#my-slider',
+      items: 1,
+      slideBy: 'page',
+      autoplay: true,
+      controls: false,
+      nav: false,
+      autoplayButtonOutput: false,
+    //   controlsText: ['‹','›']
+    });
+  });
+</script>
 </body>
 
 </html>

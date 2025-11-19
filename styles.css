@@ -82,27 +82,44 @@ html {
   cursor: pointer;
 }
 
+
+/* container do slider */
+.my-slider {
+  position: relative;
+  width: 100%;            /* ocupa o espaço do pai */
+  overflow: hidden;       /* evita scroll horizontal visível */
+}
+
+/* cada slide ocupa o fluxo do slider */
+.my-slider .slide {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+/* imagem com 1000vw e centralizada */
+.my-slider img {
+  width: 100%;
+  display: block;
+  object-fit: contain;      /* corta se necessário mantendo proporção */
+  object-position: top;
+}
+
+/* legenda */
+.my-slider .caption {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 5;
+}
+
 /*banner inicial*/
-.banner {
-  position: relative; /* Necessário para o pseudo-elemento funcionar */
-  /* background-image: url("assets/bgcobsultoria.jpg"); */
-  background-image: url("assets/topo-oficial-todos.jpg.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-inline: 15%;
-  z-index: 1; /* Garante que o conteúdo fique acima da camada */
-}
-@media (max-width: 768px) {
-  .banner {
-    padding-inline: 0;
-  }
-}
+
 
 /* .banner::before {
   content: "";
@@ -250,13 +267,21 @@ html {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    padding: 20px;
     
   }
   .services-card2 {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    padding: 20px;
   }
+ .service-image {
+  display: none;
+ }
+ .service-image2 {
+  display: none;
+ }
 }
 
 .services-card:hover {
