@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Soluções Tributárias</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="stylesheet" type="text/css" href="reset.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="styles.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="reset.css?v=1.0.1" media="screen">
+    <link rel="stylesheet" type="text/css" href="styles.css?v=1.0.1" media="screen">
     <!-- meta descriptions -->
     <meta name="description"
-        content="A Open Consultoria Tributária reduz e recupera créditos tributários desde 2007, com planejamento estratégico para empresas e entidades públicas, consultoria, treinamentos e a ferramenta GT-Fácil." />
+        content="Soluções inteligentes em consultoria, treinamento, sistemas e editora para aprimorar a gestão tributária no setor público e privado." />
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Open Consultoria Tributária">
+    <meta property="og:title" content="Open Soluções Tributárias">
     <meta property="og:description"
-        content="A Open Consultoria Tributária reduz e recupera créditos tributários, oferece planejamento estratégico para empresas e entidades públicas, consultoria e treinamentos.">
+        content="Soluções inteligentes em consultoria, treinamento, sistemas e editora para aprimorar a gestão tributária no setor público e privado.">
     <meta property="og:image" content="https://openconsultoriatributaria.com.br/imagem-de-destaque.jpg">
     <meta property="og:url" content="https://openconsultoriatributaria.com.br/">
     <meta property="og:type" content="website">
@@ -213,7 +213,7 @@
                         <img src="assets/icons/facebook-white.svg" alt="instagram" class="icons" />
                     </a>
                     <a href="https://www.youtube.com/channel/UCgKB0x_osmc2DiOqyeqi-kg" target="_blank"
-                        rel="noopener noreferrer" title="Acessar o canal do YouTube da Open Consultoria Tributária">
+                        rel="noopener noreferrer" title="Acessar o canal do YouTube da Open Soluções Tributárias">
                         <img src="assets/icons/youtube-white.svg" alt="instagram" class="icons" />
                     </a>
                 </nav>
@@ -246,11 +246,11 @@
 <script>
   // dados dos banners (substitua pelas suas URLs)
   const banners = [
-    { url: './assets/slides/banner-1.jpg', alt: 'Promo 1', caption: 'Promo 1' },
-    { url: './assets/slides//banner-2.jpg', alt: 'Promo 2', caption: 'Promo 2' },
-    { url: './assets/slides/banner-3.jpg', alt: 'Promo 2', caption: 'Promo 2' },
-    { url: './assets/slides/banner-4.jpg', alt: 'Promo 2', caption: 'Promo 2' },
-    { url: './assets/slides/banner-5.jpg', alt: 'Promo 2', caption: 'Promo 2' }
+    { url: './assets/slides/banner-1.jpg', alt: 'Promo 1', caption: 'Promo 1', redirectUrl: "https://opensolucoestributarias.com.br/" },
+    { url: './assets/slides//banner-2.jpg', alt: 'Promo 2', caption: 'Promo 2', redirectUrl: "https://opentreinamentos.com.br/" },
+    { url: './assets/slides/banner-3.jpg', alt: 'Promo 2', caption: 'Promo 2', redirectUrl: "https://openconsultoriatributaria.com.br/" },
+    { url: './assets/slides/banner-4.jpg', alt: 'Promo 2', caption: 'Promo 2', redirectUrl: "https://opentreinamentos.com.br/" },
+    { url: './assets/slides/banner-5.jpg', alt: 'Promo 2', caption: 'Promo 2', redirectUrl: "https://gestaotributaria.com.br/" }
   ];
 
   // espera o DOM carregar
@@ -261,8 +261,8 @@
     banners.forEach(b => {
       const slide = document.createElement('div');
       slide.className = 'slide';
-      slide.innerHTML = `
-        <img src="${b.url}" alt="${(b.alt || 'banner')}" loading="lazy" />     
+      slide.innerHTML = `     
+        <img src="${b.url}" alt="${(b.alt || 'banner')}" loading="lazy" onclick="window.open('${b.redirectUrl}', '_blank')" style="cursor: pointer;" />
       `;
       container.appendChild(slide);
     });
